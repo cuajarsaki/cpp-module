@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pchung <pchung@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:37:53 by pchung            #+#    #+#             */
-/*   Updated: 2025/03/12 13:37:55 by pchung           ###   ########.fr       */
+/*   Updated: 2025/04/19 17:18:18 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contact.cpp
 #include "Contact.hpp"
 
 Contact::Contact() {}

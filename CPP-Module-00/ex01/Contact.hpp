@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pchung <pchung@student.42tokyo.jp>         +#+  +:+       +#+        */
+/*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:38:06 by pchung            #+#    #+#             */
-/*   Updated: 2025/03/12 13:38:12 by pchung           ###   ########.fr       */
+/*   Updated: 2025/04/19 17:18:22 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contact.hpp
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
