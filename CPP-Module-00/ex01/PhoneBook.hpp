@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/12 13:37:33 by pchung            #+#    #+#             */
-/*   Updated: 2025/04/19 17:18:34 by pchung           ###   ########.fr       */
+/*   Updated: 2025/04/27 20:04:17 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ public:
     void searchContact() const;
     void displayAllContacts() const;
     void displayContact(int index) const;
+
+    // const⇒この関数は、クラスの中身（メンバ変数）を変更しませんという意味
+    // 読み取り専用と明示し、間違えてデータを変えたらコンパイルエラーになる。
 };
 
 #endif
