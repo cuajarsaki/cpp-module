@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:43:19 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/01 18:43:21 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/02 22:49:01 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,6 @@ int main(int argc, char* argv[]) {
     std::cout << "Successfully created: " << outputFilename << std::endl;
     return 0;
 }
+
+// echo "Hello World! This is a test file." > hello.txt
+// ./replace hello.txt "World" "C++"
