@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 03:11:10 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 21:09:30 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:49:45 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,14 @@ public:
     Fixed(const Fixed &src);
     ~Fixed();
 
-    // コピー代入演算子
     Fixed &operator=(const Fixed &src);
 
-    // メンバ関数
     int getRawBits(void) const;
     void setRawBits(int const raw);
     float toFloat(void) const;
     int toInt(void) const;
 };
 
-// ストリーム挿入演算子
 std::ostream &operator<<(std::ostream &o, const Fixed &rhs);
 
 #endif

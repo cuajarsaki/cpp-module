@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 02:19:48 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 21:09:30 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 22:07:38 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,43 +76,40 @@ Fixed Fixed::operator-(const Fixed &rhs) const {
 
 Fixed Fixed::operator*(const Fixed &rhs) const {
     Fixed result;
-    // 生のビットを掛けてから小数点以下のビットを調整
     long temp = (long)this->m_rawBits * (long)rhs.getRawBits();
     result.setRawBits(temp >> this->m_fractionalBits);
     return result;
 }
 
 Fixed Fixed::operator/(const Fixed &rhs) const {
-    // ゼロ除算のチェック
     if (rhs.getRawBits() == 0) {
         std::cerr << "Error: Division by zero" << std::endl;
         return Fixed();
     }
     
     Fixed result;
-    // 精度を保つためにまず左シフトし、その後除算
     long temp = ((long)this->m_rawBits << this->m_fractionalBits) / rhs.getRawBits();
     result.setRawBits(temp);
     return result;
 }
 
-Fixed &Fixed::operator++() {  // 前置インクリメント
+Fixed &Fixed::operator++() { 
     this->m_rawBits++;
     return *this;
 }
 
-Fixed Fixed::operator++(int) {  // 後置インクリメント
+Fixed Fixed::operator++(int) { 
     Fixed temp(*this);
     ++(*this);
     return temp;
 }
 
-Fixed &Fixed::operator--() {  // 前置デクリメント
+Fixed &Fixed::operator--() { 
     this->m_rawBits--;
     return *this;
 }
 
-Fixed Fixed::operator--(int) {  // 後置デクリメント
+Fixed Fixed::operator--(int) {  
     Fixed temp(*this);
     --(*this);
     return temp;

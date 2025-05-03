@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 02:19:54 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 21:09:30 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:48:11 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,25 +46,22 @@ public:
     Fixed operator/(const Fixed &rhs) const;
 
     // インクリメント/デクリメント演算子
-    Fixed &operator++();    // 前置インクリメント
-    Fixed operator++(int);  // 後置インクリメント
-    Fixed &operator--();    // 前置デクリメント
-    Fixed operator--(int);  // 後置デクリメント
+    Fixed &operator++();    
+    Fixed operator++(int);  
+    Fixed &operator--();    
+    Fixed operator--(int); 
 
-    // メンバー関数
     int getRawBits(void) const;
     void setRawBits(int const raw);
     float toFloat(void) const;
     int toInt(void) const;
 
-    // 静的メンバー関数
     static Fixed &min(Fixed &a, Fixed &b);
     static const Fixed &min(const Fixed &a, const Fixed &b);
     static Fixed &max(Fixed &a, Fixed &b);
     static const Fixed &max(const Fixed &a, const Fixed &b);
 };
 
-// ストリーム挿入演算子
 std::ostream &operator<<(std::ostream &o, const Fixed &rhs);
 
 #endif
