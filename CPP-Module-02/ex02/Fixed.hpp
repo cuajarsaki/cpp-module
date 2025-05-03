@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 02:19:54 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 03:03:56 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:09:30 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Fixed {
 private:
-    int _rawBits;
-    static const int _fractionalBits = 8;
+    int m_rawBits;
+    static const int m_fractionalBits = 8;
 
 public:
 

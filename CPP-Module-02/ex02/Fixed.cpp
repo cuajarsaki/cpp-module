@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 02:19:48 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 03:06:51 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:09:30 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include <iostream>
 #include <cmath>
 
-Fixed::Fixed() : _rawBits(0) {
+Fixed::Fixed() : m_rawBits(0) {
 }
 
 Fixed::Fixed(const int value) {
-    this->_rawBits = value << this->_fractionalBits;
+    this->m_rawBits = value << this->m_fractionalBits;
 }
 
 Fixed::Fixed(const float value) {
-    this->_rawBits = roundf(value * (1 << this->_fractionalBits));
+    this->m_rawBits = roundf(value * (1 << this->m_fractionalBits));
 }
 
 Fixed::Fixed(const Fixed &src) {
@@ -34,51 +34,51 @@ Fixed::~Fixed() {
 
 Fixed &Fixed::operator=(const Fixed &src) {
     if (this != &src)
-        this->_rawBits = src.getRawBits();
+        this->m_rawBits = src.getRawBits();
     return *this;
 }
 
 bool Fixed::operator>(const Fixed &rhs) const {
-    return this->_rawBits > rhs.getRawBits();
+    return this->m_rawBits > rhs.getRawBits();
 }
 
 bool Fixed::operator<(const Fixed &rhs) const {
-    return this->_rawBits < rhs.getRawBits();
+    return this->m_rawBits < rhs.getRawBits();
 }
 
 bool Fixed::operator>=(const Fixed &rhs) const {
-    return this->_rawBits >= rhs.getRawBits();
+    return this->m_rawBits >= rhs.getRawBits();
 }
 
 bool Fixed::operator<=(const Fixed &rhs) const {
-    return this->_rawBits <= rhs.getRawBits();
+    return this->m_rawBits <= rhs.getRawBits();
 }
 
 bool Fixed::operator==(const Fixed &rhs) const {
-    return this->_rawBits == rhs.getRawBits();
+    return this->m_rawBits == rhs.getRawBits();
 }
 
 bool Fixed::operator!=(const Fixed &rhs) const {
-    return this->_rawBits != rhs.getRawBits();
+    return this->m_rawBits != rhs.getRawBits();
 }
 
 Fixed Fixed::operator+(const Fixed &rhs) const {
     Fixed result;
-    result.setRawBits(this->_rawBits + rhs.getRawBits());
+    result.setRawBits(this->m_rawBits + rhs.getRawBits());
     return result;
 }
 
 Fixed Fixed::operator-(const Fixed &rhs) const {
     Fixed result;
-    result.setRawBits(this->_rawBits - rhs.getRawBits());
+    result.setRawBits(this->m_rawBits - rhs.getRawBits());
     return result;
 }
 
 Fixed Fixed::operator*(const Fixed &rhs) const {
     Fixed result;
     // 生のビットを掛けてから小数点以下のビットを調整
-    long temp = (long)this->_rawBits * (long)rhs.getRawBits();
-    result.setRawBits(temp >> this->_fractionalBits);
+    long temp = (long)this->m_rawBits * (long)rhs.getRawBits();
+    result.setRawBits(temp >> this->m_fractionalBits);
     return result;
 }
 
@@ -91,13 +91,13 @@ Fixed Fixed::operator/(const Fixed &rhs) const {
     
     Fixed result;
     // 精度を保つためにまず左シフトし、その後除算
-    long temp = ((long)this->_rawBits << this->_fractionalBits) / rhs.getRawBits();
+    long temp = ((long)this->m_rawBits << this->m_fractionalBits) / rhs.getRawBits();
     result.setRawBits(temp);
     return result;
 }
 
 Fixed &Fixed::operator++() {  // 前置インクリメント
-    this->_rawBits++;
+    this->m_rawBits++;
     return *this;
 }
 
@@ -108,7 +108,7 @@ Fixed Fixed::operator++(int) {  // 後置インクリメント
 }
 
 Fixed &Fixed::operator--() {  // 前置デクリメント
-    this->_rawBits--;
+    this->m_rawBits--;
     return *this;
 }
 
@@ -120,19 +120,19 @@ Fixed Fixed::operator--(int) {  // 後置デクリメント
 
 // メンバ関数
 int Fixed::getRawBits(void) const {
-    return this->_rawBits;
+    return this->m_rawBits;
 }
 
 void Fixed::setRawBits(int const raw) {
-    this->_rawBits = raw;
+    this->m_rawBits = raw;
 }
 
 float Fixed::toFloat(void) const {
-    return (float)this->_rawBits / (1 << this->_fractionalBits);
+    return (float)this->m_rawBits / (1 << this->m_fractionalBits);
 }
 
 int Fixed::toInt(void) const {
-    return this->_rawBits >> this->_fractionalBits;
+    return this->m_rawBits >> this->m_fractionalBits;
 }
 
 Fixed &Fixed::min(Fixed &a, Fixed &b) {

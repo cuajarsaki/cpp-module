@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 16:03:53 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 16:10:50 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:10:16 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Point {
 private:
-    Fixed const _x;
-    Fixed const _y;
+    Fixed const m_x;
+    Fixed const m_y;
 
 public:
     Point();

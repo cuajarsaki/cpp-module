@@ -6,20 +6,20 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 16:06:49 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 16:11:11 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:10:16 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
 
-Point::Point() : _x(0), _y(0) {
+Point::Point() : m_x(0), m_y(0) {
 }
 
 // 浮動小数点値を使用するコンストラクタ
-Point::Point(const float x, const float y) : _x(x), _y(y) {
+Point::Point(const float x, const float y) : m_x(x), m_y(y) {
 }
 
-Point::Point(const Point &src) : _x(src._x), _y(src._y) {
+Point::Point(const Point &src) : m_x(src.m_x), m_y(src.m_y) {
 }
 
 Point::~Point() {
@@ -38,9 +38,9 @@ Point &Point::operator=(const Point &src) {
 }
 
 Fixed Point::getX() const {
-    return this->_x;
+    return this->m_x;
 }
 
 Fixed Point::getY() const {
-    return this->_y;
+    return this->m_y;
 }

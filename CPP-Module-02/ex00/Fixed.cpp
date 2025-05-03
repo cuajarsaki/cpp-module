@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 00:02:45 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 01:14:36 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 21:09:21 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 // Fixed型のオブジェクトを作るときに、_rawBits というメンバ変数を 0 で初期化
-Fixed::Fixed() : _rawBits(0) {
+Fixed::Fixed() : m_rawBits(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
@@ -26,7 +26,7 @@ Fixed::Fixed(const Fixed &src) {
 Fixed &Fixed::operator=(const Fixed &src) {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &src)
-        this->_rawBits = src.getRawBits();
+        this->m_rawBits = src.getRawBits();
     return *this;
 }
 
@@ -36,9 +36,9 @@ Fixed::~Fixed() {
 
 int Fixed::getRawBits(void) const {
     std::cout << "getRawBits member function called" << std::endl;
-    return this->_rawBits;
+    return this->m_rawBits;
 }
 
 void Fixed::setRawBits(int const raw) {
-    this->_rawBits = raw;
+    this->m_rawBits = raw;
 }
