@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 22:53:03 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/02 22:53:04 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:38:12 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 class Harl {
 private:
-    void debug(void);
-    void info(void);
-    void warning(void);
-    void error(void);
+    void m_debug(void);
+    void m_info(void);
+    void m_warning(void);
+    void m_error(void);
 
 public:
     Harl();

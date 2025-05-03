@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:40:07 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/01 18:40:09 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:35:57 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 class HumanB {
 private:
-    std::string name;
-    Weapon* weapon;  // Using pointer since HumanB might not have a weapon
-
+    std::string m_name;
+    Weapon* m_weapon; 
+    
 public:
     HumanB(std::string name);
     ~HumanB();

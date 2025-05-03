@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:40:02 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/01 18:40:03 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:35:35 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 class HumanA {
 private:
-    std::string name;
-    Weapon& weapon;  // Using reference since HumanA always has a weapon
+    std::string m_name;
+    Weapon& m_weapon;
 
 public:
     HumanA(std::string name, Weapon& weapon);

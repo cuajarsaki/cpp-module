@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 16:03:26 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/03 16:03:31 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:55:50 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,10 @@ private:
     static const int _fractionalBits = 8;
 
 public:
-    // デフォルトコンストラクタ
     Fixed();
-    // 整数コンストラクタ
     Fixed(const int value);
-    // 浮動小数点コンストラクタ
     Fixed(const float value);
-    // コピーコンストラクタ
     Fixed(const Fixed &src);
-    // デストラクタ
     ~Fixed();
 
     // コピー代入演算子

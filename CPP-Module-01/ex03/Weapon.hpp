@@ -6,7 +6,7 @@
 /*   By: pchung <pchung@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 18:39:21 by pchung            #+#    #+#             */
-/*   Updated: 2025/05/01 18:39:23 by pchung           ###   ########.fr       */
+/*   Updated: 2025/05/03 17:37:31 by pchung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Weapon {
 private:
-    std::string type;
+    std::string m_type;
 
 public:
     Weapon(std::string type);
