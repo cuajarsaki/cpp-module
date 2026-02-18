@@ -3,3 +3,5 @@ en.subject.pdf
 Account.hpp
 tests.cpp
 settings.json
+*.o
+CPP-Module-07/ex02/array
